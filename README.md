@@ -77,6 +77,8 @@ Auth
     - [x] Accept Rides
     - [x] Decline rides
     - [x] Get user details after ride is accepted.
+    - [x] Check updates
+  
 
 
     
