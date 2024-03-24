@@ -32,7 +32,7 @@ const Register = () => {
       "Passwords must match"
     ),
     phoneNumber: Yup.string()
-      .matches(/^\d{10}$/, "Phone number must be 10 digits")
+      .matches(/^\d{10}$/, "Phone number must be 10 digits and begin with number")
       .required("Required"),
     role: Yup.string(),
     licenseNumber: Yup.string()
@@ -82,7 +82,7 @@ const Register = () => {
     try {
       const res = await fetch("http://localhost:4000/register", requestOptions);
       const data = await res.json()
-      console.log(data)
+     
       if (res && data.success) {
         message.success(data.msg);
         router.push('/')
